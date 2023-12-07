@@ -41,10 +41,7 @@ include 'conn.php';
         if (isset($_POST['ja'])) {
             $del = "DELETE FROM student WHERE id = " . $_POST['student'];
             mysqli_query($conn, $del);
-            echo "<p>Verwijderd!</p>";
-            echo "<form method='post' action='index.php'>
-    <input type='submit' class='terugknop' value='<- terug'>
-    </form>";
+            header('location: index.php');
         }
 
         ?>
